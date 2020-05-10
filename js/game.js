@@ -276,19 +276,6 @@ function onkeyDown(e) {
         GAME_STATE.spacePressed = false;
       }
     }
-  this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
-  this.buttonShoot.onInputDown.add(this.goShootPressed, this);
-  this.buttonShoot.onInputUp.add(this.goShootReleased, this);
-
-player = this.game.add.sprite(30, 30, 'ship');
-player.inputEnabled = true;
-player.input.enableDrag();
-player.events.onDragStart.add(onDragStart, this);
-player.events.onDragStop.add(onDragStop, this);
-
-function onDragStart(sprite, pointer) {
-    // do something when dragging
-}
 
 init();
 window.addEventListener("keydown", onkeyDown);
