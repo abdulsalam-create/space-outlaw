@@ -279,5 +279,7 @@ function onkeyDown(e) {
 
 init();
 window.addEventListener("keydown", onkeyDown);
+window.addEventListener("touchstart", onkeyDown);
+window.addEventListener("touchend", onkeyUp);
 window.addEventListener("keyup", onkeyUp);
 window.requestAnimationFrame(update);
