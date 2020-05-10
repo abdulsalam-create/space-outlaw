@@ -67,6 +67,7 @@ footer {
   position: absolute;
   margin-left: -20px;
   width: 40px;
+  touch-action: pan-x;
 }
 
 .game .laser {
