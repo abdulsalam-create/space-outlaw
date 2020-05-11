@@ -11,7 +11,7 @@ const LASER_MAX_SPEED = 300;
 const LASER_COOLDOWN = 0.3;
 
 const ENEMIES_PER_ROW = 10;
-const ENEMY_HORIZONTAL_PADDING = 80;
+const ENEMY_HORIZONTAL_PADDING = 100;
 const ENEMY_VERTICAL_PADDING = 70;
 const ENEMY_VERTICAL_SPACING = 80;
 const ENEMY_COOLDOWN = 5.0;
@@ -61,7 +61,7 @@ function rand(min, max) {
 
 function createPlayer($container) {
   GAME_STATE.playerX = GAME_WIDTH / 2;
-  GAME_STATE.playerY = GAME_HEIGHT / 1.3;
+  GAME_STATE.playerY = GAME_HEIGHT - 700;
   const $player = document.createElement("img");
   $player.src = "img/player-red-3.png";
   $player.className = "player";
@@ -106,7 +106,7 @@ function init() {
   const $container = document.querySelector(".game");
   createPlayer($container);
 
-  const enemySpacing = (GAME_WIDTH - ENEMY_HORIZONTAL_PADDING * 2) / (ENEMIES_PER_ROW - 1);
+  const enemySpacing = (GAME_WIDTH - ENEMY_HORIZONTAL_PADDING) / (ENEMIES_PER_ROW - 1);
   for (let j = 0; j < 3; j++) {
     const y = ENEMY_VERTICAL_PADDING + j * ENEMY_VERTICAL_SPACING;
     for (let i = 0; i < ENEMIES_PER_ROW; i++) {
