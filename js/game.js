@@ -2,8 +2,8 @@ const KEY_CODE_LEFT = 37;
 const KEY_CODE_RIGHT = 39;
 const KEY_CODE_SPACE = 32;
 
-const GAME_WIDTH = window.innerWidth;
-const GAME_HEIGHT = window.innerHeight;
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 600;
 
 const PLAYER_WIDTH = 20;
 const PLAYER_MAX_SPEED = 600;
@@ -61,7 +61,7 @@ function rand(min, max) {
 
 function createPlayer($container) {
   GAME_STATE.playerX = GAME_WIDTH / 2;
-  GAME_STATE.playerY = GAME_HEIGHT / 1.4;
+  GAME_STATE.playerY = GAME_HEIGHT - 50;
   const $player = document.createElement("img");
   $player.src = "img/player-red-3.png";
   $player.className = "player";
@@ -87,7 +87,7 @@ function updatePlayer(dt, $container) {
   GAME_STATE.playerX = clamp(
     GAME_STATE.playerX,
     PLAYER_WIDTH,
-    GAME_WIDTH
+    GAME_WIDTH - PLAYER_WIDTH
     );
     
     if (GAME_STATE.spacePressed && GAME_STATE.playerCooldown <= 0) {
