@@ -3,7 +3,7 @@ const KEY_CODE_RIGHT = 39;
 const KEY_CODE_SPACE = 32;
 
 const GAME_WIDTH = window.innerWidth;
-const GAME_HEIGHT = 600;
+const GAME_HEIGHT = window.innerHeight;
 
 const PLAYER_WIDTH = 20;
 const PLAYER_MAX_SPEED = 600;
@@ -61,7 +61,7 @@ function rand(min, max) {
 
 function createPlayer($container) {
   GAME_STATE.playerX = GAME_WIDTH / 2;
-  GAME_STATE.playerY = GAME_HEIGHT - 50;
+  GAME_STATE.playerY = GAME_HEIGHT / 1.4;
   const $player = document.createElement("img");
   $player.src = "img/player-red-3.png";
   $player.className = "player";
