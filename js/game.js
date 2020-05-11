@@ -2,7 +2,7 @@ const KEY_CODE_LEFT = 37;
 const KEY_CODE_RIGHT = 39;
 const KEY_CODE_SPACE = 32;
 
-const GAME_WIDTH = 800;
+const GAME_WIDTH = window.innerWidth;
 const GAME_HEIGHT = 600;
 
 const PLAYER_WIDTH = 20;
@@ -87,7 +87,7 @@ function updatePlayer(dt, $container) {
   GAME_STATE.playerX = clamp(
     GAME_STATE.playerX,
     PLAYER_WIDTH,
-    GAME_WIDTH - PLAYER_WIDTH
+    GAME_WIDTH
     );
     
     if (GAME_STATE.spacePressed && GAME_STATE.playerCooldown <= 0) {

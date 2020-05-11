@@ -134,21 +134,3 @@ footer {
     transform: translate(0, 0);
   }
 }
-
-@media (max-width: 767px) {
-  .game {
-    width: 600px;
-    height: 600px;
-  }
-  .player {
-    width: 20px;
-  }
-  .game-wrapper {
-    
-    flex: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #222;
-  }
-}
