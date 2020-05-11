@@ -3,7 +3,7 @@ const KEY_CODE_RIGHT = 39;
 const KEY_CODE_SPACE = 32;
 
 const GAME_WIDTH = window.innerWidth;
-const GAME_HEIGHT = window.innerHeight;
+const GAME_HEIGHT = 1000;
 
 const PLAYER_WIDTH = 20;
 const PLAYER_MAX_SPEED = 600;
